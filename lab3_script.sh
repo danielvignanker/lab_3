@@ -7,12 +7,14 @@
 echo "Enter a file name: "
 read fileName
 echo "Enter a regEx: "
-#read regEx
+read regEx
+
+grep $regEx $fileName
 #number of phone numbers
-grep -c ^\d{3}-\d{3}-\d{4}$ $fileName
+grep -c ...-...-.... regex_practice.txt
 #count of number of emails
-grep -c ^\w@\w\.\w $fileName
+grep -c "@" regex_practice.txt
 #list of numbers with 303 area code
-grep -o ^303-\d{3}-\d{4}$ $fileName
+grep -o 303-...-.... regex_practice.txt
 #store list of emails
 grep geocities.com regex_practice.txt >> email_results.txt
